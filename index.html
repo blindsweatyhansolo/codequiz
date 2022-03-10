@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>CODE QUIZ!</title>
+</head>
+<body>
+
+    <header>
+        <div class="headerContainer">
+            <h1>
+                <a href="./highscores.html">View HighScores</a>
+            </h1>
+        </div>
+    </header>
+    
+    <main class="pageContent" id="mainPageContent">
+        
+        <div class="wrapper">
+            <div class="title" id="quizTitle">
+                <h2 class="title">
+                    CODE QUIZ!
+                </h2>
+            </div>
+
+            <div class="timer">
+                Timer: <span>0</span>
+            </div>
+
+            <div class="quiz">
+                <p class="quizInfo">
+                    How fast can you answer these questions? Test your skills!<br /><br />
+                    <span id="specialMsg">Your Goal:</span><br/>
+                    Try to answer as many of these questions correctly before the timer runs out.<br />
+                    Keep in mind incorrect answers will subtract from your time!
+                </p>
+                
+                <div id="questionGroup">
+                    <ul id="choicesList">
+                    </ul>
+                </div>
+
+                <button class="btn" id="startTimeBtn">START</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
