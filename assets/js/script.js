@@ -41,4 +41,55 @@ var questions = [
         "None of the above"],
         answer: "At the end of the <body> section"
     },
-]
+];
+
+// create variables
+
+// timer variables
+// start button to start timer
+var startTimer = document.querySelector("#startTimeBtn");
+var timeLeft = 10;
+var holdInterval = 0;
+
+
+// div container for questions
+var questionDiv = document.querySelector("#questionDiv");
+
+// integer displaying time (secs)
+var currentTime = document.querySelector("#currentTime");
+
+// special msg variable, use this to display corrent or incorrect over answer text?
+var specialMsg = document.querySelector("#specialMsg");
+
+// title, hide on start, change to "time's up" === 0
+var title = document.querySelector("#quizTitle");
+
+
+// function click start button will start time, hide title
+startTimer.addEventListener("click", function(){
+    title.hidden = true;
+    startTimer.hidden = true;
+    
+    if (holdInterval === 0) {
+        holdInterval = setInterval(function() {
+            timeLeft--;
+            currentTime.textContent = "Timer: " + timeLeft;
+
+            if (timeLeft === 0) {
+                clearInterval(holdInterval);
+                currentTime.textContent = "Time's Up!";
+                // run endgame function
+            }
+        }, 1000);
+    }
+});
+
+// renders questions and choices to page
+// var questionFunc = function() {
+
+//     // clear existing data
+
+//     var questionText = document.querySelector("#quizInfo");
+//     questionText.innerHTML = 
+
+// }
