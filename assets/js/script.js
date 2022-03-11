@@ -43,32 +43,36 @@ var questions = [
     },
 ];
 
-// create variables
+
+// base variables
+var score = 0;
+// var questionIndex = 0;
+
+// title, hide on start, change to "time's up" === 0
+var title = document.querySelector("#quizTitle");
+var quizInfo = document.querySelector("#quizInfo");
 
 // timer variables
 // start button to start timer
 var startTimer = document.querySelector("#startTimeBtn");
-var timeLeft = 10;
+var currentTime = document.querySelector("#currentTime");
+var timeLeft = 80;
+var timePenalty = 10;
 var holdInterval = 0;
 
-
+// question section variables
 // div container for questions
 var questionDiv = document.querySelector("#questionDiv");
-
-// integer displaying time (secs)
-var currentTime = document.querySelector("#currentTime");
-
 // special msg variable, use this to display corrent or incorrect over answer text?
 var specialMsg = document.querySelector("#specialMsg");
 
-// title, hide on start, change to "time's up" === 0
-var title = document.querySelector("#quizTitle");
 
 
-// function click start button will start time, hide title
+// function click start button will start time, hide title, button and quizinfo text
 startTimer.addEventListener("click", function(){
     title.hidden = true;
     startTimer.hidden = true;
+    quizInfo.hidden = true;
     
     if (holdInterval === 0) {
         holdInterval = setInterval(function() {
@@ -78,18 +82,36 @@ startTimer.addEventListener("click", function(){
             if (timeLeft === 0) {
                 clearInterval(holdInterval);
                 currentTime.textContent = "Time's Up!";
-                // run endgame function
+                endQuiz();
             }
         }, 1000);
     }
+    quizStart();
 });
 
-// renders questions and choices to page
-// var questionFunc = function() {
 
-//     // clear existing data
+// // // renders questions and choices to page
+var quizStart = function() {
 
-//     var questionText = document.querySelector("#quizInfo");
-//     questionText.innerHTML = 
+    for (var i = 0; i < questions.length; i++) {
+        var question = questions[i].title;
+        document.write(question);
+        var choices = questions[i].choices;
+    }
 
-// }
+    // // using forEach applies function to each item in array
+    // choices.forEach(function (newItem) {
+    //     newItem = choices;
+    //     liCreate.textContent = newItem;
+    //     ulCreate.appendChild(liCreate);
+    //     liCreate.addEventListener("click", (compare));
+    // })
+}
+
+
+
+
+// // function to end quiz, switch to highscore board
+// var endQuiz = function() {
+//     location.replace("./highscores.html");
+// };
