@@ -77,7 +77,6 @@ var specialMsg = document.querySelector("#specialMsg");
 startTimer.addEventListener("click", function(){
     title.hidden = true;
     startTimer.hidden = true;
-    // quizInfo.hidden = true;
     
     if (holdInterval === 0) {
         holdInterval = setInterval(function() {
@@ -91,23 +90,20 @@ startTimer.addEventListener("click", function(){
             }
         }, 1000);
     }
-    quizStart(questionIndex);
+
+    questionStart(questionIndex);
 });
 
 
 // // // renders questions and choices to page
-var quizStart = function(questionIndex) {
+var questionStart = function(questionIndex) {
     
     questionDiv.innerHTML = "";
     quizText.innerHTML = "";
 
-    for (var i = 0; i < questions.length; i++) {
-        var question = questions[i].title;
-        // console.log(question);
-        var choices = questions[i].choices;
-        // console.log(choices);
-        quizText.textContent = question;
-    }
+    var question = questions[questionIndex].title;
+    var choices = questions[questionIndex].choices;
+    quizText.textContent = question;
 
     var choiceBtn = document.createElement("button");
     choiceBtn.setAttribute("class", "btn");
@@ -126,21 +122,17 @@ var quizStart = function(questionIndex) {
  var compareSelection = function(event) {
      var element = event.target;
 
-     if (element.matches("button")) {
-        var answerStatusContainer = document.createElement("div");
-        answerStatusContainer.setAttribute("class", "answerStatus")
+     if (element.matches(".btn")) {
 
         if (element.textContent == questions[questionIndex].answer) {
             score++;
-            answerStatusContainer.setAttribute("style", "color: green;");
-            answerStatusContainer.textContent = "Correct!";
+            // answerStatusContainer.setAttribute("style", "color: green;");
+            // answerStatusContainer.textContent = "Correct!";
         } else {
            timeLeft = timeLeft - timePenalty;
-           answerStatusContainer.setAttribute("style", "color: red;");
-           answerStatusContainer.textContent = "Incorrect!"; 
+        //    answerStatusContainer.setAttribute("style", "color: red;");
+        //    answerStatusContainer.textContent = "Incorrect!"; 
         }
-
-        answerStatusContainer.innerHTML = "";
      }
 
      questionIndex++;
@@ -148,10 +140,8 @@ var quizStart = function(questionIndex) {
      if (questionIndex >= questions.length) {
          endQuiz();
      } else {
-         quizStart(questionIndex);
+         questionStart(questionIndex);
      }
-
-     questionDiv.appendChild(answerStatusContainer);
  }
 
 

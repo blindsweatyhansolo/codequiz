@@ -2,7 +2,6 @@ var clear = document.querySelector("#clear")
 var goBack = document.querySelector("#goBack");
 
 
-
 // click event to clear localStorage and reload page
 clear.addEventListener("click", function() {
     localStorage.clear();
