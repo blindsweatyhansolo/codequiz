@@ -125,13 +125,10 @@ var questionStart = function(questionIndex) {
      if (element.matches(".btn")) {
 
         if (element.textContent == questions[questionIndex].answer) {
-            score++;
-            // answerStatusContainer.setAttribute("style", "color: green;");
-            // answerStatusContainer.textContent = "Correct!";
+            // score++;
+
         } else {
            timeLeft = timeLeft - timePenalty;
-        //    answerStatusContainer.setAttribute("style", "color: red;");
-        //    answerStatusContainer.textContent = "Incorrect!"; 
         }
      }
 
