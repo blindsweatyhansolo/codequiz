@@ -91,3 +91,8 @@ body {
     font-size: 20px;
     padding: 10px auto 10px auto;
 }
+
+.form {
+    border: dotted 3px var(--quaternary-color);
+    background-color: var(--tertiary-color);
+}
