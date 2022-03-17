@@ -131,6 +131,7 @@ var questionStart = function(questionIndex) {
            timeLeft = timeLeft - timePenalty;
         }
      }
+     // try to set hidden to true here
      // increase questionIndex for next question
      questionIndex++;
 
@@ -151,7 +152,7 @@ var questionStart = function(questionIndex) {
     currentTime.innerHTML = "";
     
     title.hidden = false;
-    title.textContent = "Done!";
+    title.textContent = "Time's Up!";
     title.setAttribute("class", "title");
 
     // calculate time remaining, set and replace to score

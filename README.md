@@ -26,4 +26,4 @@ GitHub Repo: https://github.com/blindsweatyhansolo/codequiz
 
 Screenshot:
 
-![image](placeholder)
+![image](./assets/images/screenshotFinal.png)

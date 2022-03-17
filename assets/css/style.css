@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #FA58B6;
-    --secondary-color: #7A0BC0;
-    --tertiary-color: #270082;
-    --quaternary-color: #1A1A40;
+    --primary-color: #D8E3E7;
+    --secondary-color: #51C4D3;
+    --tertiary-color: #126E82;
+    --quaternary-color: #132C33;
 }
 
 * {
@@ -14,6 +14,22 @@
 body {
     background-color: var(--quaternary-color);
     font-family: Courier, monospace;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px var(--tertiary-color);
+}
+
+a:hover {
+    text-shadow: 3px 3px var(--tertiary-color);
+}
+
+.headerContainer {
+    text-align: center;
 }
 
 .wrapper {
@@ -50,6 +66,13 @@ body {
     box-shadow: 5px 5px;
     border: none;
     margin-top: 10px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .btn:hover {
@@ -110,10 +133,4 @@ body {
     border: 2px solid var(--tertiary-color);
     padding: 7px 10px;
     margin: 7px 7px;
-}
-
-.btnContainer {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
