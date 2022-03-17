@@ -1,7 +1,7 @@
 // question array, questions as objects
 var questions = [
     {
-        title: "Which not a way to declare a JavaScript variable?",
+        title: "Which is NOT a way to declare a JavaScript variable?",
         choices: ["var",
         "let",
         "def",
