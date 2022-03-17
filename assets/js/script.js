@@ -1,18 +1,18 @@
 // question array, questions as objects
 var questions = [
     {
-        title: "Which is the correct way to reference an external stylesheet?",
-        choices: ["<style src='style.css'>",
-        "<stylesheet>styles.css</stylesheet>",
-        "<link rel='stylesheet' href='styles.css'>",
-        "<link rel='styles' href='styles.css'>"],
-        answer: "<link rel='stylesheet' href='styles.css'>"
+        title: "Which not a way to declare a JavaScript variable?",
+        choices: ["var",
+        "let",
+        "def",
+        "const"],
+        answer: "def"
     },
 
     {
-        title: "Which of the following is NOT a CSS display property type?",
-        choices: ["inline", "block", "inline-flex", "flex"],
-        answer: "inline-flex"
+        title: "What are values associated with objects called?",
+        choices: ["value", "properties", "set", "data"],
+        answer: "properties"
     },
 
     {
@@ -22,7 +22,7 @@ var questions = [
     },
 
     {
-        title: "Which comparison operator means 'Not Equal Value or Equal Type'?",
+        title: "Which comparison operator means 'Not Equal Value OR Equal Type'?",
         choices: ["==", "!=", "<=", "!=="],
         answer: "!=="
     },
