@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #D8E3E7;
+    --secondary-color: #51C4D3;
+    --tertiary-color: #126E82;
+    --quaternary-color: #132C33;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--quaternary-color);
+    font-family: Courier, monospace;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px var(--tertiary-color);
+}
+
+a:hover {
+    text-shadow: 3px 3px var(--tertiary-color);
+}
+
+.headerContainer {
+    text-align: center;
+}
+
+.wrapper {
+    display: block;
+    background-color: var(--secondary-color);
+    margin: 3%;
+    padding: 50px 10px;
+    border: dashed 3px var(--quaternary-color);
+    box-shadow: 10px 10px rgba(122,11,192,0.5);
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 8vw;
+    color: var(--quaternary-color);
+    text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+.quizInfo {
+    text-align: center;
+    font-size: 20px;
+    color: var(--primary-color);
+    padding: 20px 20px;
+}
+
+.btn {
+    text-align: center;
+    padding: 10px 50px;
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    border-radius: 20%;
+    font-weight: bold;
+    box-shadow: 5px 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.btn:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.btn:active {
+    box-shadow: 3px 3px;
+}
+
+.timer {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 20px;
+}
+
+.message {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+
+.quiz {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.answerStatus {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px auto 10px auto;
+}
+
+.form {
+    border: dotted 3px var(--quaternary-color);
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.highScoresContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scoreCard {
+    background-color: var(--primary-color);
+    list-style-type: none;
+    border: 2px solid var(--tertiary-color);
+    padding: 7px 10px;
+    margin: 7px 7px;
+}
