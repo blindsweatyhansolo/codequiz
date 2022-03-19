@@ -163,6 +163,13 @@ var questionStart = function(questionIndex) {
         quizText.setAttribute("class", "message");
         quizText.textContent = "Your final score is: " + timeRemaining;
         quizInfo.appendChild(quizText);
+    } else if (timeLeft < 0) {
+        var timeRemaining = 0;
+        // stop timer
+        clearInterval(holdInterval);
+        quizText.setAttribute("class", "message");
+        quizText.textContent = "Your final score is: " + timeRemaining;
+        quizInfo.appendChild(quizText);
     }
 
     // submit highscore section //
